@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Muhammad Jahanzaib — Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Geist:wght@300;400;500;600&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            void: "#05060A",
+            moon: "#C9D3F0",
+            primary: "#ECEFF6",
+            "outline-dim": "rgba(255,255,255,0.12)",
+          },
+          fontFamily: {
+            display: ["'Bricolage Grotesque'", "sans-serif"],
+            accent: ["'Instrument Serif'", "serif"],
+            body: ["'Geist'", "sans-serif"],
+            mono: ["'Geist Mono'", "monospace"],
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #05060A;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Subtle fine starfield rotation */
+    @keyframes orbit-cw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbit-ccw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(-360deg); }
+    }
+
+    .animate-orbit-slow {
+      animation: orbit-cw 180s linear infinite;
+    }
+    .animate-orbit-reverse {
+      animation: orbit-ccw 240s linear infinite;
+    }
+  </style>
+</head>
+<body class="bg-[#05060A] text-[#ECEFF6] font-body antialiased selection:bg-[#C9D3F0] selection:text-[#05060A] min-h-screen relative overflow-x-hidden">
+<!-- Subtle Fine Film Grain Overlay -->
+<div class="pointer-events-none fixed inset-0 z-30 opacity-[0.035] mix-blend-screen" style="background-image: radial-gradient(#ECEFF6 1px, transparent 1px); background-size: 16px 16px;"></div>
+<!-- FLOATING CENTERED PILL NAVBAR -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
+<nav class="bg-[#05060A]/75 backdrop-blur-md border border-white/10 rounded-full px-6 py-2.5 flex items-center gap-7 shadow-[0_12px_32px_rgba(0,0,0,0.8)]">
+<a class="font-body text-[13px] tracking-wide text-white font-medium flex items-center transition-colors" href="#home">
+        Home
+        <span class="inline-block w-1.5 h-1.5 rounded-full bg-[#C9D3F0] ml-1.5 shadow-[0_0_8px_#C9D3F0]"></span>
+</a>
+<a class="font-body text-[13px] tracking-wide text-white/60 hover:text-white transition-colors" href="#about">About</a>
+<a class="font-body text-[13px] tracking-wide text-white/60 hover:text-white transition-colors" href="#focus">Focus</a>
+<a class="font-body text-[13px] tracking-wide text-white/60 hover:text-white transition-colors" href="#work">Work</a>
+<a class="font-body text-[13px] tracking-wide text-white/60 hover:text-white transition-colors" href="#contact">Contact</a>
+</nav>
+</header>
+<!-- FIXED BOTTOM-LEFT SECTION INDICATOR -->
+<div class="fixed bottom-6 left-6 z-40 pointer-events-none select-none">
+<span class="font-mono text-xs tracking-widest text-white/50 uppercase">01 — MOON</span>
+</div>
+<!-- FIXED BOTTOM-RIGHT MOTION TOGGLE -->
+<div class="fixed bottom-6 right-6 z-40 pointer-events-auto">
+<button class="font-mono text-xs text-white/60 hover:text-white border border-white/15 hover:border-white/30 bg-[#05060A]/60 backdrop-blur-md px-3.5 py-1.5 rounded-full transition-all flex items-center gap-2" type="button">
+      Motion <span class="text-[#C9D3F0] text-[10px]">●</span> ON
+    </button>
+</div>
+<main class="w-full relative z-10">
+<!-- ======================================================== -->
+<!-- SECTION 1: HOME — MOON                                   -->
+<!-- ======================================================== -->
+<section class="relative min-h-screen w-full flex flex-col justify-between items-center text-center px-6 pt-28 pb-12 overflow-hidden" id="home">
+<!-- ROTATING VISIBLE STARS IN CIRCULAR ORBITS -->
+<div class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
+<!-- Orbit Plane 1 -->
+<div class="w-[780px] h-[780px] md:w-[940px] md:h-[940px] rounded-full border border-white/[0.05] relative animate-orbit-slow">
+<span class="absolute top-[8%] left-[24%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_#ffffff]"></span>
+<span class="absolute top-[42%] right-[4%] w-1 h-1 rounded-full bg-[#C9D3F0] shadow-[0_0_6px_#C9D3F0]"></span>
+<span class="absolute bottom-[16%] left-[12%] w-1.5 h-1.5 rounded-full bg-white/90 shadow-[0_0_6px_#ffffff]"></span>
+<span class="absolute bottom-[28%] right-[18%] w-1 h-1 rounded-full bg-[#C9D3F0]/80"></span>
+<span class="absolute top-[2%] right-[32%] w-1 h-1 rounded-full bg-white/70"></span>
+<span class="absolute bottom-[6%] left-[45%] w-1 h-1 rounded-full bg-white/80"></span>
+</div>
+<!-- Orbit Plane 2 (Wider + Reverse) -->
+<div class="absolute w-[1140px] h-[1140px] md:w-[1360px] md:h-[1360px] rounded-full border border-white/[0.03] animate-orbit-reverse">
+<span class="absolute top-[18%] left-[15%] w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_7px_#fff]"></span>
+<span class="absolute top-[28%] right-[10%] w-1 h-1 rounded-full bg-[#C9D3F0]"></span>
+<span class="absolute bottom-[22%] left-[22%] w-1.5 h-1.5 rounded-full bg-white/80"></span>
+<span class="absolute bottom-[12%] right-[25%] w-1 h-1 rounded-full bg-white/90 shadow-[0_0_6px_#fff]"></span>
+<span class="absolute top-[65%] left-[6%] w-1 h-1 rounded-full bg-[#C9D3F0]/70"></span>
+</div>
+<!-- Atmospheric Soft Ice-Silver Rim Glow -->
+<div class="absolute w-[440px] h-[440px] md:w-[540px] md:h-[540px] rounded-full bg-[#C9D3F0]/15 blur-[90px]"></div>
+</div>
+<!-- REALISTIC MOON SPHERE (Focal, clearly visible, lit upper-left, visible craters & maria) -->
+<div class="pointer-events-none relative z-0 mt-2 mb-2 flex items-center justify-center">
+<div class="w-[280px] h-[280px] sm:w-[340px] sm:h-[340px] md:w-[420px] md:h-[420px] rounded-full relative overflow-hidden shadow-[0_0_80px_rgba(201,211,240,0.22),0_0_24px_rgba(201,211,240,0.35)]" style="background: radial-gradient(circle at 32% 28%, #DCE3F5 0%, #B8C2DA 28%, #6B7285 58%, #2A2E3B 84%, #10121A 100%);">
+<!-- Lunar Maria (Dark Basalt Plains) -->
+<div class="absolute inset-0 rounded-full mix-blend-multiply opacity-55" style="background: 
+                 radial-gradient(ellipse 55% 42% at 36% 36%, #414759 0%, transparent 80%),
+                 radial-gradient(ellipse 45% 35% at 65% 30%, #363C4E 0%, transparent 75%),
+                 radial-gradient(ellipse 60% 50% at 52% 64%, #2E3342 0%, transparent 85%),
+                 radial-gradient(ellipse 30% 25% at 24% 60%, #3A3F50 0%, transparent 75%);">
+</div>
+<!-- Major Craters & High-relief Features -->
+<!-- Tycho-like Crater & Rays (South) -->
+<div class="absolute bottom-[18%] left-[44%] w-10 h-10 rounded-full border border-white/40 bg-white/10 shadow-[inset_2px_2px_4px_rgba(255,255,255,0.4),inset_-3px_-3px_5px_rgba(0,0,0,0.8)] opacity-70"></div>
+<!-- Copernicus-like Crater -->
+<div class="absolute top-[38%] left-[28%] w-12 h-12 rounded-full border border-white/30 bg-[#282D3B]/40 shadow-[inset_3px_3px_5px_rgba(255,255,255,0.3),inset_-2px_-2px_6px_rgba(0,0,0,0.85)] opacity-80"></div>
+<!-- Kepler Crater -->
+<div class="absolute top-[46%] left-[18%] w-7 h-7 rounded-full border border-white/30 bg-black/30 shadow-[inset_1px_1px_3px_rgba(255,255,255,0.3)] opacity-70"></div>
+<!-- Mare Crisium (Crisply defined dark oval plain) -->
+<div class="absolute top-[28%] right-[20%] w-14 h-11 rounded-full bg-[#1C202B]/85 border border-white/10 shadow-[inset_-2px_-2px_4px_rgba(0,0,0,0.9)] opacity-75"></div>
+<!-- Subtle Micro Craters -->
+<div class="absolute top-[62%] right-[28%] w-8 h-8 rounded-full border border-white/20 bg-black/30 shadow-[inset_2px_2px_4px_rgba(255,255,255,0.2)] opacity-60"></div>
+<div class="absolute top-[20%] left-[48%] w-6 h-6 rounded-full border border-white/20 bg-black/25 opacity-50"></div>
+<!-- Upper-Left Gentle Highlight Rim -->
+<div class="absolute inset-0 rounded-full pointer-events-none shadow-[inset_14px_14px_30px_rgba(255,255,255,0.65),inset_-24px_-24px_50px_rgba(5,6,10,0.95)]"></div>
+<!-- Outer Crisp Ice-Silver Rim Accent -->
+<div class="absolute inset-0 rounded-full border border-[#C9D3F0]/60 pointer-events-none"></div>
+</div>
+</div>
+<!-- CENTER CONTENT FOREGROUND (Cleanly positioned so it does not obscure the moon) -->
+<div class="relative z-10 flex flex-col items-center max-w-5xl mx-auto w-full -mt-6 sm:-mt-8">
+<!-- Headline in Bricolage Grotesque Bold -->
+<h1 class="font-display font-extrabold text-[2.75rem] sm:text-[4.25rem] md:text-[5.75rem] lg:text-[6.75rem] tracking-[-0.035em] text-[#ECEFF6] uppercase select-none leading-[0.92] drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+<span class="block">MUHAMMAD</span>
+<span class="block text-[#ECEFF6] tracking-[-0.035em]">JAHANZAIB</span>
+</h1>
+<!-- Role Line -->
+<p class="font-body text-base sm:text-lg md:text-xl text-white/90 font-normal tracking-wide mt-4">
+          Mobile App Developer
+        </p>
+<!-- Locked Subtitle -->
+<p class="font-body text-xs sm:text-sm md:text-base text-white/60 font-light tracking-wide mt-2">
+          Exploring code, building ideas, finding my orbit.
+        </p>
+<!-- Dual Pill Action Buttons -->
+<div class="flex items-center gap-4 mt-8 sm:mt-9">
+<a class="h-11 sm:h-12 px-7 sm:px-8 rounded-full bg-[#ECEFF6] text-[#05060A] font-body font-semibold text-sm tracking-wide flex items-center justify-center transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_0_24px_rgba(236,239,246,0.5)]" href="#work">
+            View Work
+          </a>
+<a class="h-11 sm:h-12 px-7 sm:px-8 rounded-full bg-transparent border border-white/25 hover:border-white text-[#ECEFF6] font-body text-sm tracking-wide flex items-center justify-center transition-all duration-300 hover:bg-white/[0.06]" href="#about">
+            Say Hello
+          </a>
+</div>
+</div>
+<!-- Subtle Bottom Spacer to balance flex layout -->
+<div class="w-full h-4"></div>
+</section>
+<!-- ======================================================== -->
+<!-- SECTION 2: ABOUT — EARTH                                 -->
+<!-- ======================================================== -->
+<section class="relative min-h-screen w-full flex flex-col justify-between p-8 md:p-16 lg:p-24 overflow-hidden bg-gradient-to-b from-[#05060A] via-[#05060A] to-[#080B14]" id="about">
+<!-- Section Label (Mono "02 — EARTH" only) -->
+<div class="w-full flex items-center justify-between relative z-10 pt-2">
+<span class="font-mono text-xs tracking-[0.2em] uppercase text-white/60">02 — EARTH</span>
+</div>
+<!-- Giant Headline & Minimal Statement Block -->
+<div class="relative z-10 my-auto py-12 max-w-5xl">
+<!-- Giant headline with ONLY "Builder" in Instrument Serif Italic -->
+<h2 class="font-display font-extrabold text-[3rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] tracking-[-0.035em] text-[#ECEFF6] leading-[0.94] select-none">
+          Student by day.<br/>
+<span class="font-accent font-normal italic lowercase tracking-normal text-[#C9D3F0]">Builder</span> always.
+        </h2>
+<!-- ONE short supporting line only -->
+<p class="font-body text-base sm:text-lg md:text-xl text-white/70 font-light tracking-normal mt-7 max-w-xl">
+          Computer Science at The Superior University, Lahore.
+        </p>
+<!-- Three small clean mono tags -->
+<div class="flex items-center gap-2 mt-9">
+<span class="font-mono text-xs tracking-widest uppercase text-white/60 bg-white/[0.04] border border-white/10 px-3.5 py-1.5 rounded-full">
+            CODE · IDEAS · MOBILE
+          </span>
+</div>
+</div>
+<!-- EARTH HORIZON AT BOTTOM (Curved glowing Earth horizon with deep blue tint #3C5C9E & rim light) -->
+<div class="relative w-full z-10 select-none pb-4">
+<!-- Deep Blue Tint & Atmospheric Backglow (<10% screen space) -->
+<div class="pointer-events-none absolute -bottom-36 left-1/2 -translate-x-1/2 w-[1400px] h-[340px] rounded-[100%] bg-[#3C5C9E]/30 blur-[100px]"></div>
+<div class="relative w-full h-24 flex items-end justify-center overflow-visible">
+<!-- Curved Earth Horizon Arc -->
+<div class="absolute bottom-0 w-[240%] left-[-70%] h-64 rounded-[50%] border-t border-[#769CFF]/60 shadow-[0_-12px_40px_rgba(60,92,158,0.5)] pointer-events-none bg-gradient-to-b from-[#182647]/50 to-transparent"></div>
+<!-- Single Subtle Lahore Beacon Dot -->
+<div class="relative z-20 flex flex-col items-center gap-2 -mb-1">
+<div class="relative flex items-center justify-center">
+<span class="w-3 h-3 rounded-full bg-[#C9D3F0] shadow-[0_0_12px_#C9D3F0] animate-ping absolute opacity-70"></span>
+<span class="w-2 h-2 rounded-full bg-white relative shadow-[0_0_8px_#ffffff]"></span>
+</div>
+<span class="font-mono text-[11px] tracking-[0.2em] uppercase text-white/75 bg-[#05060A]/80 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+              Lahore
+            </span>
+</div>
+</div>
+</div>
+</section>
+</main>
+</body></html>

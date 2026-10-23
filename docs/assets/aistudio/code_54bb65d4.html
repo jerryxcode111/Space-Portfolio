@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Geist:wght@300;400;500&amp;family=Instrument+Serif:ital@0;1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#05060A",
+            "surface": "#121318",
+            "surface-container": "#1e1f25",
+            "surface-container-low": "#1a1b20",
+            "surface-container-lowest": "#0d0e13",
+            "surface-container-highest": "#33343a",
+            "primary": "#ecefff",
+            "on-surface": "#e3e2e9",
+            "on-surface-variant": "#c6c6cd",
+            "mars-rust": "#B2634A",
+            "saturn-gold": "#CDB98A"
+          },
+          fontFamily: {
+            "headline-lg": ["Bricolage Grotesque", "sans-serif"],
+            "headline-md": ["Bricolage Grotesque", "sans-serif"],
+            "headline-sm": ["Bricolage Grotesque", "sans-serif"],
+            "serif": ["Instrument Serif", "serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "label-mono": ["JetBrains Mono", "monospace"]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #05060A;
+        color: #e3e2e9;
+      }
+      body {
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+      .deep-grain {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+    }
+    ::-webkit-scrollbar { display: none; }
+  </style>
+</head>
+<body class="bg-[#05060A] text-on-surface font-body-md text-body-md min-h-screen relative deep-grain select-none antialiased">
+<!-- TOP NAV: Single Centered "Menu" Pill -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 pt-safe pointer-events-auto">
+<nav class="h-9 px-5 rounded-full bg-[#0C0E14]/80 backdrop-blur-md border border-white/5 flex items-center justify-center gap-2.5 shadow-[0_4px_24px_rgba(0,0,0,0.7)] cursor-pointer active:scale-95 transition-transform">
+<div class="w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_rgba(255,255,255,0.8)]"></div>
+<span class="font-label-mono text-[11px] uppercase tracking-[0.18em] text-white/90 font-medium">Menu</span>
+</nav>
+</header>
+<!-- MAIN SCROLL CONTAINER -->
+<main class="flex flex-col relative w-full pt-20 pb-28 px-5 max-w-[390px] mx-auto overflow-hidden">
+<!-- ========================================================= -->
+<!-- SECTION 03: FOCUS (MARS)                                  -->
+<!-- ========================================================= -->
+<section class="flex flex-col relative w-full pt-4 pb-16 overflow-hidden" id="focus-mars">
+<!-- Mars Atmospheric Dusty-Rust Rim Glow Backdrop -->
+<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full pointer-events-none blur-3xl opacity-25 bg-[#B2634A]"></div>
+<!-- Section Label: 03 — MARS -->
+<div class="flex items-center gap-2 mb-6">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B2634A] shadow-[0_0_8px_#B2634A]"></span>
+<span class="font-label-mono text-[11px] uppercase tracking-[0.18em] text-[#B2634A]">03 — MARS</span>
+</div>
+<!-- Visible Mars Planet with warm dusty-rust rim glow -->
+<div class="relative w-full flex items-center justify-center py-2 mb-4">
+<div class="relative w-52 h-52 rounded-full flex items-center justify-center">
+<!-- Outer diffuse aura -->
+<div class="absolute inset-0 rounded-full blur-2xl opacity-40 bg-[#B2634A]"></div>
+<!-- Mars Body with limb darkening & rim light -->
+<div class="relative w-48 h-48 rounded-full shadow-[inset_-16px_-18px_40px_rgba(0,0,0,0.9),inset_4px_6px_20px_rgba(255,180,150,0.35),0_0_32px_rgba(178,99,74,0.45)] border border-[#B2634A]/40 overflow-hidden" style="background: radial-gradient(circle at 35% 30%, #C26E54 0%, #873822 55%, #38120A 90%, #150503 100%);">
+<!-- Subtle surface texture craters / dust bands -->
+<div class="absolute inset-0 opacity-20 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/30 via-transparent to-black"></div>
+<div class="absolute w-32 h-6 -rotate-12 top-14 -left-6 bg-black/25 blur-sm rounded-full"></div>
+<div class="absolute w-24 h-4 rotate-6 bottom-12 right-2 bg-black/35 blur-sm rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- One Short Supporting Line Only -->
+<p class="font-headline-md text-[1.65rem] leading-tight text-primary tracking-tight text-center my-3 font-bold">
+        Building for mobile.
+      </p>
+<!-- Monumental Stacked Typography: FLUTTER & DART (Same giant size, crisp bright outline) -->
+<div class="flex flex-col items-center justify-center text-center my-4 select-none">
+<span class="font-headline-lg text-[3.25rem] leading-[0.95] tracking-tight font-extrabold text-primary">
+          FLUTTER
+        </span>
+<span class="font-headline-lg text-[3.25rem] leading-[0.95] tracking-tight font-extrabold text-transparent" style="-webkit-text-stroke: 1.5px #B2634A; text-shadow: 0 0 16px rgba(178, 99, 74, 0.45);">
+          DART
+        </span>
+</div>
+<!-- Slim Phone Wireframe (Cleanly positioned below, non-overlapping) -->
+<div class="flex justify-center w-full mt-6">
+<div class="relative w-40 h-64 rounded-[28px] border-[1.5px] border-[#B2634A]/40 bg-surface-container-lowest/80 backdrop-blur-sm p-2.5 flex flex-col items-center justify-between shadow-[0_12px_32px_rgba(0,0,0,0.7)]">
+<!-- Top dynamic notch / speaker -->
+<div class="w-12 h-1 rounded-full bg-[#B2634A]/40"></div>
+<!-- Clean minimal screen accent -->
+<div class="w-full flex-1 my-2 rounded-2xl bg-gradient-to-b from-white/[0.03] to-transparent border border-white/5 flex items-center justify-center">
+<div class="w-8 h-8 rounded-full border border-[#B2634A]/50 flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#B2634A] shadow-[0_0_10px_#B2634A]"></div>
+</div>
+</div>
+<!-- Bottom home indicator bar -->
+<div class="w-14 h-1 rounded-full bg-white/20"></div>
+</div>
+</div>
+</section>
+<!-- Celestial Gap Separator -->
+<div class="w-full flex items-center justify-center py-10 opacity-25">
+<div class="h-px w-16 bg-white"></div>
+</div>
+<!-- ========================================================= -->
+<!-- SECTION 04: JOURNEY (SATURN)                              -->
+<!-- ========================================================= -->
+<section class="flex flex-col relative w-full pt-4 pb-16 overflow-hidden" id="journey-saturn">
+<!-- Atmospheric Pale Gold Saturn Glow -->
+<div class="absolute -top-16 -left-20 w-80 h-80 rounded-full pointer-events-none blur-3xl opacity-20 bg-[#CDB98A]"></div>
+<!-- Section Label: 04 — SATURN -->
+<div class="flex items-center gap-2 mb-4">
+<span class="w-1.5 h-1.5 rounded-full bg-[#CDB98A] shadow-[0_0_8px_#CDB98A]"></span>
+<span class="font-label-mono text-[11px] uppercase tracking-[0.18em] text-[#CDB98A]">04 — SATURN</span>
+</div>
+<!-- Giant Headline: ONLY "orbit" in Instrument Serif Italic -->
+<div class="mb-6">
+<h2 class="font-headline-lg text-[2.5rem] leading-[1.08] text-primary tracking-tight font-bold">
+          Finding my <span class="italic font-serif font-light text-[#CDB98A]">orbit.</span>
+</h2>
+</div>
+<!-- Large, Prominently Visible Saturn with Bright Pale-Gold Ring -->
+<div class="relative w-full flex items-center justify-center my-6">
+<div class="relative w-72 h-56 flex items-center justify-center">
+<!-- Saturn Ring SVG Behind Ball -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-0" fill="none" viewbox="0 0 288 224">
+<g transform="rotate(-22 144 112)">
+<!-- Back portion of ring -->
+<ellipse cx="144" cy="112" rx="132" ry="34" stroke="#CDB98A" stroke-opacity="0.8" stroke-width="2.5"></ellipse>
+<ellipse cx="144" cy="112" rx="120" ry="28" stroke="#CDB98A" stroke-dasharray="4 3" stroke-opacity="0.45" stroke-width="1"></ellipse>
+<ellipse cx="144" cy="112" rx="142" ry="38" stroke="#CDB98A" stroke-opacity="0.3" stroke-width="0.75"></ellipse>
+</g>
+</svg>
+<!-- Saturn Body Planet Ball -->
+<div class="relative z-10 w-32 h-32 rounded-full shadow-[inset_-14px_-14px_30px_rgba(0,0,0,0.85),inset_4px_4px_16px_rgba(255,245,220,0.4),0_0_24px_rgba(205,185,138,0.35)] border border-[#CDB98A]/30 overflow-hidden" style="background: linear-gradient(135deg, #DFD1AA 0%, #C4AE7A 35%, #927D4C 70%, #302611 100%);">
+<!-- Atmospheric Gas Bands -->
+<div class="absolute inset-0 flex flex-col justify-around py-3 opacity-30">
+<div class="w-full h-1 bg-black/40 blur-[0.5px]"></div>
+<div class="w-full h-2 bg-white/30 blur-[0.5px]"></div>
+<div class="w-full h-1 bg-black/30 blur-[0.5px]"></div>
+<div class="w-full h-2.5 bg-black/40 blur-[0.5px]"></div>
+<div class="w-full h-1 bg-white/20 blur-[0.5px]"></div>
+</div>
+</div>
+<!-- Saturn Ring SVG Front Cut -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none z-20" fill="none" viewbox="0 0 288 224">
+<g transform="rotate(-22 144 112)">
+<!-- Front half of ring passing in front of sphere -->
+<path d="M 12 112 A 132 34 0 0 0 276 112" stroke="#CDB98A" stroke-opacity="0.95" stroke-width="2.5"></path>
+<path d="M 24 112 A 120 28 0 0 0 264 112" stroke="#CDB98A" stroke-dasharray="4 3" stroke-opacity="0.5" stroke-width="1"></path>
+<path d="M 2 112 A 142 38 0 0 0 286 112" stroke="#CDB98A" stroke-opacity="0.35" stroke-width="0.75"></path>
+</g>
+</svg>
+</div>
+</div>
+<!-- THREE MILESTONE DOTS ALONG THE TRAJECTORY (No card panels, max 8 words) -->
+<div class="relative w-full mt-4 flex flex-col gap-6 pl-2">
+<!-- Connecting Orbit Guide Line -->
+<div class="absolute left-[19px] top-3 bottom-3 w-px bg-gradient-to-b from-[#CDB98A]/60 via-[#CDB98A]/30 to-[#CDB98A]/60"></div>
+<!-- Milestone 1 -->
+<div class="relative flex items-start gap-4">
+<div class="relative z-10 w-6 h-6 rounded-full bg-[#05060A] border border-[#CDB98A] flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_8px_rgba(205,185,138,0.5)]">
+<div class="w-2 h-2 rounded-full bg-[#CDB98A]"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-base text-primary font-bold tracking-tight">Foundations</h3>
+<p class="font-body-md text-sm text-on-surface-variant mt-0.5">
+              Computer Science, The Superior University
+            </p>
+</div>
+</div>
+<!-- Milestone 2 -->
+<div class="relative flex items-start gap-4">
+<div class="relative z-10 w-6 h-6 rounded-full bg-[#05060A] border border-[#CDB98A] flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_8px_rgba(205,185,138,0.5)]">
+<div class="w-2 h-2 rounded-full bg-[#CDB98A]"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-base text-primary font-bold tracking-tight">Direction</h3>
+<p class="font-body-md text-sm text-on-surface-variant mt-0.5">
+              Flutter and Dart
+            </p>
+</div>
+</div>
+<!-- Milestone 3 -->
+<div class="relative flex items-start gap-4">
+<div class="relative z-10 w-6 h-6 rounded-full bg-[#05060A] border border-[#CDB98A] flex items-center justify-center shrink-0 mt-0.5 shadow-[0_0_12px_#CDB98A]">
+<div class="w-2 h-2 rounded-full bg-[#CDB98A] shadow-[0_0_6px_#CDB98A]"></div>
+</div>
+<div class="flex flex-col">
+<h3 class="font-headline-sm text-base text-primary font-bold tracking-tight">In progress</h3>
+<p class="font-body-md text-sm text-on-surface-variant mt-0.5">
+              Growing as a developer
+            </p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FIXED UI: Small Mono Label Bottom-Left, Motion Toggle Bottom-Right (NO BOTTOM BAR) -->
+<footer class="fixed bottom-4 inset-x-0 px-5 z-40 pointer-events-none flex items-center justify-between font-label-mono text-[10px] tracking-widest text-white/50 pb-safe">
+<div class="flex items-center gap-1.5 select-none pointer-events-auto">
+<span class="w-1.5 h-1.5 rounded-full bg-[#CDB98A]"></span>
+<span class="uppercase">04 — Saturn</span>
+</div>
+<div class="flex items-center gap-1.5 select-none pointer-events-auto cursor-pointer">
+<span class="uppercase text-white/40">Motion</span>
+<span class="text-white font-medium">ON</span>
+</div>
+</footer>
+</body></html>
