@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="web_standard" name="shell-type"/>
+<title>Muhammad Jahanzaib — Portfolio</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Geist:wght@300;400;500&amp;family=Geist+Mono:wght@400;500&amp;family=Instrument+Serif:ital@1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            background: "#05060A",
+            surface: "#05060A",
+            "surface-container-lowest": "#030407",
+            "surface-container-low": "#090A11",
+            "surface-container": "#0F101A",
+            "surface-container-high": "#151724",
+            "on-surface": "#F0F2FA",
+            "on-surface-variant": "#9CA3BA",
+            outline: "#696E82",
+            "outline-variant": "#2F3240",
+            primary: "#ECEFFF",
+            "primary-container": "#C9D3F0",
+            "on-primary-container": "#111B31",
+            jovian: "#BFA58A",
+            neptune: "#4B4FA6",
+            solar: "#E8A85A"
+          },
+          fontFamily: {
+            headline: ["'Bricolage Grotesque'", "sans-serif"],
+            serif: ["'Instrument Serif'", "serif"],
+            body: ["'Geist'", "sans-serif"],
+            mono: ["'Geist Mono'", "monospace"]
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    @layer base {
+      html, body {
+        margin: 0;
+        padding: 0;
+        background-color: #05060A;
+      }
+      body {
+        overscroll-behavior: none;
+      }
+    }
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    .text-stroke {
+      -webkit-text-stroke: 1.5px rgba(156, 163, 186, 0.35);
+    }
+  </style>
+</head>
+<body class="bg-[#05060A] text-on-surface font-body antialiased selection:bg-primary-container selection:text-on-primary-container relative min-h-screen overflow-x-hidden">
+<!-- Subtle starry void grain -->
+<div class="pointer-events-none fixed inset-0 z-30 opacity-[0.035] mix-blend-screen" style="background-image:radial-gradient(rgba(236,239,255,0.7) 1px, transparent 0); background-size:28px 28px;"></div>
+<!-- Top Floating Pill Navbar -->
+<header class="fixed top-6 left-1/2 -translate-x-1/2 z-50 pointer-events-auto">
+<nav class="bg-[#090A11]/70 backdrop-blur-md border border-outline-variant/50 rounded-full px-6 py-2.5 flex items-center gap-7 shadow-[0_12px_32px_rgba(0,0,0,0.7)]">
+<a class="font-body text-[13px] tracking-wide text-on-surface-variant hover:text-primary transition-colors" href="#home">Home</a>
+<a class="font-body text-[13px] tracking-wide text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-body text-[13px] tracking-wide text-on-surface-variant hover:text-primary transition-colors" href="#focus">Focus</a>
+<a class="font-body text-[13px] tracking-wide text-primary font-medium transition-colors" href="#work">Work</a>
+<a class="font-body text-[13px] tracking-wide text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+</header>
+<!-- Fixed Bottom-Left Section Label (Only "05 — JUPITER") -->
+<div class="fixed bottom-6 left-6 z-40 pointer-events-none select-none">
+<span class="font-mono text-xs tracking-widest text-outline uppercase">05 — JUPITER</span>
+</div>
+<!-- Fixed Bottom-Right Motion Toggle (Only "Motion ON") -->
+<div class="fixed bottom-6 right-6 z-40 pointer-events-auto">
+<button class="font-mono text-xs text-outline hover:text-on-surface border border-outline-variant/50 hover:border-outline bg-[#090A11]/60 backdrop-blur-sm px-3.5 py-1.5 rounded-full transition-colors flex items-center gap-2" type="button">
+<span>Motion</span>
+<span class="text-[#BFA58A] text-[9px]">●</span>
+<span>ON</span>
+</button>
+</div>
+<main class="w-full pt-0 bg-transparent min-h-screen relative z-10">
+<div class="flex flex-col w-full">
+<!-- ==========================================
+           SECTION 05: WORK (JUPITER)
+           ========================================== -->
+<section class="relative w-full min-h-screen px-6 lg:px-16 pt-36 pb-32 flex flex-col justify-between overflow-hidden" id="work">
+<!-- Strong Sand/Tan Rim Light & Glow (#BFA58A) for Jupiter -->
+<div class="pointer-events-none absolute -top-40 right-[-10%] w-[850px] h-[850px] rounded-full bg-[#BFA58A]/[0.12] blur-[150px]"></div>
+<div class="pointer-events-none absolute top-1/3 -left-32 w-[600px] h-[300px] bg-gradient-to-r from-[#BFA58A]/[0.08] to-transparent blur-[120px] -rotate-12"></div>
+<div class="pointer-events-none absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-[#BFA58A]/25 to-transparent"></div>
+<!-- Jupiter Content Top Header -->
+<div class="relative z-10 w-full flex flex-col md:flex-row md:items-end justify-between gap-6 pb-14">
+<div class="flex flex-col gap-3 max-w-4xl">
+<!-- Section Label: ONLY "05 — JUPITER" -->
+<div class="font-mono text-xs uppercase tracking-[0.25em] text-[#BFA58A] flex items-center gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#BFA58A] shadow-[0_0_8px_#BFA58A]"></span>
+<span>05 — JUPITER</span>
+</div>
+<!-- Giant Headline: Bricolage Grotesque bold with ONLY "work" in Instrument Serif Italic -->
+<h2 class="font-headline font-bold text-6xl sm:text-7xl lg:text-9xl text-on-surface tracking-tight leading-none">
+              Selected <span class="font-serif italic font-normal text-[#BFA58A]">work.</span>
+</h2>
+<!-- Exactly ONE short supporting line -->
+<p class="font-body text-base sm:text-lg text-on-surface-variant mt-2 font-light">
+              Signals from active mobile development.
+            </p>
+</div>
+<!-- Lateral Nav Controls -->
+<div class="flex items-center gap-2 self-start md:self-end">
+<button aria-label="Previous Project" class="w-11 h-11 rounded-full bg-surface-container-low border border-outline-variant/40 flex items-center justify-center text-outline hover:text-on-surface hover:border-[#BFA58A]/50 transition-all" id="jovian-prev">
+<span class="material-symbols-outlined text-base">west</span>
+</button>
+<button aria-label="Next Project" class="w-11 h-11 rounded-full bg-surface-container-low border border-outline-variant/40 flex items-center justify-center text-outline hover:text-on-surface hover:border-[#BFA58A]/50 transition-all" id="jovian-next">
+<span class="material-symbols-outlined text-base">east</span>
+</button>
+</div>
+</div>
+<!-- Jupiter Panels: Placeholders ONLY (01, 02, 03, Signal incoming, crescent/minimal icon) -->
+<div class="relative z-10 w-full flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scroll-smooth no-scrollbar" id="jovian-lane">
+<!-- Panel 01 -->
+<div class="snap-start shrink-0 w-[85vw] sm:w-[540px] lg:w-[620px] flex flex-col justify-between bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:border-[#BFA58A]/40 transition-colors duration-500">
+<div class="w-full aspect-[16/10] bg-surface-container-low/60 rounded-xl flex flex-col items-center justify-center gap-3 relative overflow-hidden border border-outline-variant/20">
+<svg class="w-10 h-10 text-[#BFA58A]/60 group-hover:text-[#BFA58A] transition-colors duration-500" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+</svg>
+<span class="font-mono text-xs uppercase tracking-widest text-on-surface">Signal incoming</span>
+</div>
+<div class="pt-8 flex items-end justify-between">
+<span class="font-headline font-bold text-5xl lg:text-6xl text-outline-variant group-hover:text-[#BFA58A] transition-colors">01</span>
+</div>
+</div>
+<!-- Panel 02 -->
+<div class="snap-start shrink-0 w-[85vw] sm:w-[540px] lg:w-[620px] flex flex-col justify-between bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:border-[#BFA58A]/40 transition-colors duration-500">
+<div class="w-full aspect-[16/10] bg-surface-container-low/60 rounded-xl flex flex-col items-center justify-center gap-3 relative overflow-hidden border border-outline-variant/20">
+<svg class="w-10 h-10 text-[#BFA58A]/60 group-hover:text-[#BFA58A] transition-colors duration-500" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M3.6 9h16.8M3.6 15h16.8"></path>
+</svg>
+<span class="font-mono text-xs uppercase tracking-widest text-on-surface">Signal incoming</span>
+</div>
+<div class="pt-8 flex items-end justify-between">
+<span class="font-headline font-bold text-5xl lg:text-6xl text-outline-variant group-hover:text-[#BFA58A] transition-colors">02</span>
+</div>
+</div>
+<!-- Panel 03 -->
+<div class="snap-start shrink-0 w-[85vw] sm:w-[540px] lg:w-[620px] flex flex-col justify-between bg-surface-container-lowest/80 border border-outline-variant/30 rounded-2xl p-8 lg:p-10 relative overflow-hidden group hover:border-[#BFA58A]/40 transition-colors duration-500">
+<div class="w-full aspect-[16/10] bg-surface-container-low/60 rounded-xl flex flex-col items-center justify-center gap-3 relative overflow-hidden border border-outline-variant/20">
+<svg class="w-10 h-10 text-[#BFA58A]/60 group-hover:text-[#BFA58A] transition-colors duration-500" fill="none" stroke="currentColor" stroke-width="1.2" viewbox="0 0 24 24">
+<path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"></path>
+</svg>
+<span class="font-mono text-xs uppercase tracking-widest text-on-surface">Signal incoming</span>
+</div>
+<div class="pt-8 flex items-end justify-between">
+<span class="font-headline font-bold text-5xl lg:text-6xl text-outline-variant group-hover:text-[#BFA58A] transition-colors">03</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ==========================================
+           SECTION 06: NEXT (NEPTUNE)
+           ========================================== -->
+<section class="relative w-full h-screen min-h-[700px] flex flex-col items-center justify-center px-6 overflow-hidden select-none" id="focus">
+<!-- Deep Indigo Glow (#4B4FA6) with Faint Orbit Arc -->
+<div class="pointer-events-none absolute inset-0 flex items-center justify-center">
+<div class="w-[700px] lg:w-[900px] h-[700px] lg:h-[900px] rounded-full bg-[#4B4FA6]/[0.08] blur-[160px]"></div>
+</div>
+<svg class="pointer-events-none absolute inset-0 w-full h-full opacity-20" fill="none" preserveaspectratio="none" viewbox="0 0 1440 900">
+<path d="M -100,850 C 350,680 850,380 1550,-50" stroke="#4B4FA6" stroke-dasharray="3 10" stroke-width="1"></path>
+<circle cx="760" cy="460" fill="#4B4FA6" r="3"></circle>
+<circle cx="760" cy="460" r="16" stroke="#4B4FA6" stroke-opacity="0.35" stroke-width="0.5"></circle>
+</svg>
+<!-- Content: Section label + Enormous headline only -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-4xl">
+<!-- Section Label: ONLY "06 — NEPTUNE" -->
+<div class="font-mono text-xs uppercase tracking-[0.25em] text-[#afc6ff] mb-8 flex items-center gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#4B4FA6] shadow-[0_0_8px_#4B4FA6]"></span>
+<span>06 — NEPTUNE</span>
+</div>
+<!-- One enormous centered line: "Still exploring." with ONLY "exploring" in Instrument Serif Italic -->
+<h2 class="font-headline font-bold text-6xl sm:text-8xl lg:text-[10rem] text-on-surface tracking-tight leading-none">
+            Still <span class="font-serif italic font-normal text-[#afc6ff]">exploring.</span>
+</h2>
+</div>
+</section>
+<!-- ==========================================
+           SECTION 07: CONTACT (SUN)
+           ========================================== -->
+<section class="relative w-full min-h-screen px-6 lg:px-16 pt-28 pb-32 flex flex-col justify-between items-center overflow-hidden" id="contact">
+<!-- Stronger Amber Sun Glow (#E8A85A) Rising Dramatically from Bottom Edge -->
+<div class="pointer-events-none absolute -bottom-48 left-1/2 -translate-x-1/2 w-[1100px] lg:w-[1400px] h-[550px] lg:h-[650px] bg-gradient-to-t from-[#E8A85A]/30 via-[#E8A85A]/[0.08] to-transparent rounded-t-full blur-[130px]"></div>
+<div class="pointer-events-none absolute -bottom-72 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full border border-[#E8A85A]/15 opacity-50"></div>
+<div class="pointer-events-none absolute -bottom-96 left-1/2 -translate-x-1/2 w-[1300px] h-[1300px] rounded-full border border-[#E8A85A]/10 opacity-30"></div>
+<!-- Section Label: ONLY "07 — SUN" -->
+<div class="relative z-10 w-full flex justify-center">
+<div class="font-mono text-xs uppercase tracking-[0.25em] text-[#E8A85A] flex items-center gap-2.5">
+<span class="w-1.5 h-1.5 rounded-full bg-[#E8A85A] shadow-[0_0_10px_#E8A85A]"></span>
+<span>07 — SUN</span>
+</div>
+</div>
+<!-- Center Contact Unit -->
+<div class="relative z-10 flex flex-col items-center text-center max-w-4xl my-auto py-12">
+<!-- Giant Headline: Bricolage Grotesque bold with ONLY "together" in Instrument Serif Italic -->
+<h2 class="font-headline font-bold text-5xl sm:text-7xl lg:text-8xl text-on-surface tracking-tight leading-[1.08] mb-6">
+            Let's make something <span class="font-serif italic font-normal text-[#E8A85A]">together.</span>
+</h2>
+<!-- EXACTLY ONE supporting line only -->
+<p class="font-body text-base sm:text-lg text-on-surface-variant max-w-md mb-12 font-light">
+            Open for collaborations.
+          </p>
+<!-- Big pill button with subtle expanding concentric ripple rings -->
+<div class="relative flex items-center justify-center mb-12">
+<span class="absolute w-56 h-20 rounded-full border border-[#E8A85A]/25 animate-ping opacity-30 pointer-events-none"></span>
+<span class="absolute w-64 h-24 rounded-full border border-[#E8A85A]/15 pointer-events-none"></span>
+<a class="relative z-10 h-14 px-10 rounded-full bg-primary-container text-on-primary-container font-body text-sm font-medium tracking-wide flex items-center gap-3 transition-all duration-300 hover:shadow-[0_0_32px_rgba(232,168,90,0.45)] hover:scale-105" href="mailto:contact@muhammadjahanzaib.dev">
+<span>Send a Signal</span>
+<span class="material-symbols-outlined text-base">north_east</span>
+</a>
+</div>
+<!-- Minimal Outline Icon Links (GitHub, LinkedIn, Email only, no invented handles) -->
+<div class="flex items-center gap-6">
+<a aria-label="GitHub" class="p-3.5 rounded-full border border-outline-variant/50 text-outline hover:text-on-surface hover:border-[#E8A85A]/60 bg-surface-container-low/70 transition-all" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg>
+</a>
+<a aria-label="LinkedIn" class="p-3.5 rounded-full border border-outline-variant/50 text-outline hover:text-on-surface hover:border-[#E8A85A]/60 bg-surface-container-low/70 transition-all" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+<rect height="12" width="4" x="2" y="9"></rect>
+<circle cx="4" cy="4" r="2"></circle>
+</svg>
+</a>
+<a aria-label="Email" class="p-3.5 rounded-full border border-outline-variant/50 text-outline hover:text-on-surface hover:border-[#E8A85A]/60 bg-surface-container-low/70 transition-all" href="#">
+<svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<rect height="16" rx="2" width="20" x="2" y="4"></rect>
+<path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+</svg>
+</a>
+</div>
+</div>
+<div class="h-6"></div>
+</section>
+<!-- ==========================================
+           SECTION 08: FOOTER
+           ========================================== -->
+<footer class="relative w-full bg-[#030407] pt-16 pb-12 overflow-hidden flex flex-col justify-between border-t border-outline-variant/20">
+<!-- Minimal Row: Links + Back to top -->
+<div class="w-full max-w-7xl mx-auto px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6 pb-12">
+<nav class="flex flex-wrap items-center justify-center gap-7">
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#home">Home</a>
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#focus">Focus</a>
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#work">Work</a>
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-8">
+<span class="font-mono text-xs text-outline uppercase tracking-widest">© 2026</span>
+<a class="font-mono text-xs uppercase tracking-widest text-outline hover:text-on-surface flex items-center gap-2 group transition-colors" href="#home">
+<span>Back to top</span>
+<span class="transform group-hover:-translate-y-1 transition-transform">↑</span>
+</a>
+</div>
+</div>
+<!-- Cleanly proportioned, non-awkwardly cropped outlined display name (~15% opacity) -->
+<div class="w-full px-4 overflow-hidden select-none pointer-events-none pt-4 pb-2">
+<h1 class="font-headline font-bold text-[clamp(2.5rem,7.5vw,7.8rem)] text-center uppercase tracking-tight text-transparent text-stroke opacity-15 whitespace-nowrap leading-none mx-auto">
+            MUHAMMAD JAHANZAIB
+          </h1>
+</div>
+</footer>
+</div>
+</main>
+<!-- Lateral Carousel Interaction Logic for Jovian Lane -->
+<script>
+    (function () {
+      const lane = document.getElementById('jovian-lane');
+      const prevBtn = document.getElementById('jovian-prev');
+      const nextBtn = document.getElementById('jovian-next');
+
+      if (lane && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+          lane.scrollBy({ left: -500, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+          lane.scrollBy({ left: 500, behavior: 'smooth' });
+        });
+      }
+    })();
+  </script>
+</body></html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;800&amp;family=Geist:wght@300;400;500&amp;family=Instrument+Serif:ital@1&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    @layer base {
+      html, body {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #05060A;
+        color: #e3e2e9;
+      }
+      body {
+        overscroll-behavior: none;
+        -webkit-tap-highlight-color: transparent;
+        min-height: max(844px, 100dvh);
+      }
+      .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0px); }
+      .pt-safe { padding-top: env(safe-area-inset-top, 0px); }
+    }
+    ::-webkit-scrollbar { display: none; }
+
+    @keyframes orbit-cw {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+    @keyframes orbit-ccw {
+      from { transform: rotate(360deg); }
+      to { transform: rotate(0deg); }
+    }
+    .animate-orbit-slow {
+      animation: orbit-cw 40s linear infinite;
+    }
+    .animate-orbit-medium {
+      animation: orbit-ccw 28s linear infinite;
+    }
+    .animate-pulse-slow {
+      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "background": "#05060A",
+            "surface": "#121318",
+            "surface-container-lowest": "#0d0e13",
+            "surface-container-low": "#1a1b20",
+            "surface-container": "#1e1f25",
+            "surface-container-highest": "#33343a",
+            "primary": "#ecefff",
+            "primary-container": "#c9d3f0",
+            "secondary": "#afc6ff",
+            "secondary-container": "#3C5C9E",
+            "outline": "#8f9097",
+            "outline-variant": "#45464d",
+            "on-surface": "#e3e2e9"
+          },
+          fontFamily: {
+            "headline-lg": ["Bricolage Grotesque", "sans-serif"],
+            "body-md": ["Geist", "sans-serif"],
+            "label-mono": ["JetBrains Mono", "monospace"],
+            "serif-italic": ["Instrument Serif", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+</head>
+<body class="bg-[#05060A] text-on-surface font-body-md min-h-screen relative overflow-x-hidden selection:bg-primary-container selection:text-black">
+<!-- ========================================== -->
+<!-- TOP NAV: ONE CENTERED MENU PILL            -->
+<!-- ========================================== -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 z-50 pt-safe pointer-events-auto">
+<button aria-label="Open menu" class="h-9 px-5 rounded-full bg-[#12141d]/85 backdrop-blur-md flex items-center justify-center gap-2 border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.8)] text-white/90 active:scale-95 transition-all" id="menu-btn">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C9D3F0] shadow-[0_0_8px_#C9D3F0]"></span>
+<span class="font-label-mono text-xs uppercase tracking-[0.2em] font-medium">Menu</span>
+</button>
+</header>
+<!-- FULLSCREEN DARK MENU OVERLAY -->
+<div class="fixed inset-0 z-50 bg-[#05060A]/95 backdrop-blur-2xl flex flex-col justify-between p-8 opacity-0 pointer-events-none transition-opacity duration-300" id="menu-overlay">
+<div class="flex items-center justify-between pt-safe">
+<span class="font-label-mono text-xs uppercase tracking-[0.2em] text-white/40">// NAVIGATION</span>
+<button class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-white hover:bg-white/10 transition-colors" id="close-menu-btn">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<nav class="flex flex-col gap-6 my-auto text-left">
+<a class="menu-link font-headline-lg text-4xl text-white font-bold hover:text-primary-container transition-colors tracking-tight" href="#moon">01 — MOON</a>
+<a class="menu-link font-headline-lg text-4xl text-white font-bold hover:text-primary-container transition-colors tracking-tight" href="#earth">02 — EARTH</a>
+<a class="menu-link font-headline-lg text-4xl text-white font-bold hover:text-primary-container transition-colors tracking-tight" href="#work">03 — WORK</a>
+<a class="menu-link font-headline-lg text-4xl text-white font-bold hover:text-primary-container transition-colors tracking-tight" href="#contact">04 — CONTACT</a>
+</nav>
+<div class="pb-safe font-label-mono text-xs tracking-widest text-white/40">
+      MUHAMMAD JAHANZAIB © 2025
+    </div>
+</div>
+<!-- ========================================== -->
+<!-- MAIN CONTENT CONTAINER                     -->
+<!-- ========================================== -->
+<main class="flex flex-col relative w-full pt-16 pb-24 px-5">
+<!-- ========================================== -->
+<!-- SECTION 1: HOME — MOON                     -->
+<!-- ========================================== -->
+<section class="relative flex flex-col items-center text-center pt-6 pb-16 overflow-visible" id="moon">
+<!-- Centerpiece: Bright Silver-Grey Spherical Moon with Rotating Stars -->
+<div class="relative w-72 h-72 mx-auto flex items-center justify-center my-2">
+<!-- Rotating Star Orbit Rings (Layer 1 - Slow) -->
+<div class="absolute inset-0 pointer-events-none animate-orbit-slow">
+<!-- Fine visible stars placed along circumference -->
+<span class="absolute top-2 left-1/2 -translate-x-1/2 w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_#ffffff]"></span>
+<span class="absolute top-1/4 right-3 w-1 h-1 rounded-full bg-[#C9D3F0] shadow-[0_0_6px_#C9D3F0]"></span>
+<span class="absolute bottom-8 left-8 w-1 h-1 rounded-full bg-white opacity-90 shadow-[0_0_6px_#ffffff]"></span>
+<span class="absolute bottom-1/3 right-4 w-1.5 h-1.5 rounded-full bg-[#d8e2ff] opacity-80"></span>
+<span class="absolute top-12 left-6 w-1 h-1 rounded-full bg-white opacity-70"></span>
+</div>
+<!-- Rotating Star Orbit Rings (Layer 2 - Counter Orbit) -->
+<div class="absolute -inset-6 pointer-events-none animate-orbit-medium">
+<span class="absolute top-1/2 -left-1 w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_8px_#ffffff]"></span>
+<span class="absolute top-6 right-16 w-1 h-1 rounded-full bg-[#C9D3F0] opacity-80"></span>
+<span class="absolute bottom-4 right-1/3 w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_7px_#ffffff]"></span>
+<span class="absolute bottom-16 -left-2 w-1 h-1 rounded-full bg-[#d8e2ff] opacity-70"></span>
+</div>
+<!-- Delicate Circular Orbit Guides -->
+<div class="absolute inset-2 rounded-full border border-white/[0.08] pointer-events-none"></div>
+<div class="absolute -inset-4 rounded-full border border-dashed border-[#C9D3F0]/15 pointer-events-none"></div>
+<!-- Soft Ice-Silver Rim Glow (#C9D3F0) Halo -->
+<div class="absolute w-52 h-52 rounded-full bg-[#C9D3F0]/25 blur-2xl pointer-events-none"></div>
+<!-- Spherical Moon Body (Lit from upper-left with realistic 3D volume & texture) -->
+<div class="relative w-48 h-48 rounded-full overflow-hidden shadow-[0_0_35px_rgba(201,211,240,0.35)]" style="background: radial-gradient(circle at 32% 28%, #FFFFFF 0%, #D8DFEE 22%, #9BA7BD 50%, #4D5668 76%, #181C26 95%, #0A0D14 100%);">
+<!-- Maria / Lunar Craters Textures (clearly visible organic relief) -->
+<!-- Oceanus Procellarum / Large Dark Plain -->
+<div class="absolute top-7 left-14 w-16 h-20 rounded-full bg-[#6B7689]/40 blur-[3px] mix-blend-multiply"></div>
+<!-- Mare Tranquillitatis -->
+<div class="absolute top-16 right-9 w-14 h-12 rounded-full bg-[#566072]/45 blur-[2.5px] mix-blend-multiply"></div>
+<!-- Mare Serenitatis -->
+<div class="absolute top-9 right-14 w-10 h-10 rounded-full bg-[#5F6A7E]/40 blur-[2px] mix-blend-multiply"></div>
+<!-- Mare Imbrium -->
+<div class="absolute top-4 left-9 w-12 h-11 rounded-full bg-[#646F83]/35 blur-[2px] mix-blend-multiply"></div>
+<!-- Tycho Crater ray focus bottom -->
+<div class="absolute bottom-7 left-16 w-4 h-4 rounded-full bg-white/70 shadow-[0_0_5px_#ffffff]">
+<div class="absolute inset-0.5 rounded-full bg-[#464F60]"></div>
+</div>
+<!-- Copernicus crater -->
+<div class="absolute top-20 left-12 w-3.5 h-3.5 rounded-full bg-white/60 shadow-[0_0_4px_#ffffff]">
+<div class="absolute inset-0.5 rounded-full bg-[#525B6C]"></div>
+</div>
+<!-- Southern Crater clusters -->
+<div class="absolute bottom-10 right-12 w-8 h-8 rounded-full bg-[#384050]/55 blur-[2px]"></div>
+<div class="absolute bottom-4 right-16 w-11 h-7 rounded-full bg-[#242A38]/70 blur-[1px]"></div>
+<!-- Shadow Terminator overlay on bottom-right -->
+<div class="absolute inset-0 rounded-full pointer-events-none" style="background: radial-gradient(circle at 30% 28%, transparent 45%, rgba(10,13,20,0.4) 65%, rgba(5,6,10,0.92) 88%);"></div>
+<!-- Soft Ice-Silver Rim Highlight Overlay (#C9D3F0) -->
+<div class="absolute inset-0 rounded-full ring-1 ring-inset ring-[#C9D3F0]/60 pointer-events-none"></div>
+</div>
+</div>
+<!-- Hero Headline & Core Information -->
+<div class="flex flex-col items-center mt-6 z-10">
+<h1 class="font-headline-lg text-4xl sm:text-5xl font-bold text-primary tracking-tight uppercase leading-[0.95] text-center">
+          Muhammad<br/>Jahanzaib
+        </h1>
+<p class="font-body-md text-base sm:text-lg text-primary/90 mt-3 font-medium tracking-normal">
+          Mobile App Developer
+        </p>
+<p class="font-label-mono text-xs sm:text-[13px] text-outline mt-2 max-w-[280px] tracking-wide leading-relaxed">
+          Exploring code, building ideas, finding my orbit.
+        </p>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center justify-center gap-3 mt-8 w-full max-w-xs z-10">
+<a class="flex-1 inline-flex items-center justify-center h-12 px-5 rounded-full bg-primary text-[#05060A] font-body-md text-sm font-semibold tracking-wide shadow-[0_0_20px_rgba(236,239,255,0.25)] hover:bg-white active:scale-95 transition-all" href="#earth">
+          View Work
+        </a>
+<a class="flex-1 inline-flex items-center justify-center h-12 px-5 rounded-full bg-surface-container-low border border-white/10 text-primary font-body-md text-sm font-medium tracking-wide hover:bg-surface-container active:scale-95 transition-all" href="mailto:contact@jahanzaib.dev">
+          Say Hello
+        </a>
+</div>
+</section>
+<!-- Seamless Cosmic Divider Line -->
+<div class="h-20 w-full flex items-center justify-center pointer-events-none my-4">
+<div class="w-px h-16 bg-gradient-to-b from-[#C9D3F0]/30 via-white/10 to-transparent"></div>
+</div>
+<!-- ========================================== -->
+<!-- SECTION 2: ABOUT — EARTH                   -->
+<!-- ========================================== -->
+<section class="relative flex flex-col pt-6 pb-20 overflow-hidden" id="earth">
+<!-- Section Mono Label -->
+<div class="flex items-center gap-2 mb-6 font-label-mono text-xs uppercase tracking-[0.2em] text-[#afc6ff]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#afc6ff] shadow-[0_0_8px_#afc6ff]"></span>
+<span>02 — EARTH</span>
+</div>
+<!-- Giant Headline with Instrument Serif Italic for ONLY "Builder" -->
+<div class="flex flex-col z-10">
+<h2 class="font-headline-lg text-[2.5rem] sm:text-[2.75rem] font-bold text-primary tracking-tight leading-[1.05]">
+          Student by day.<br/>
+<span class="font-serif-italic italic font-normal text-primary-container text-[2.9rem] sm:text-[3.2rem] tracking-normal leading-[0.95]">Builder</span> always.
+        </h2>
+<!-- ONE Short Supporting Line Only -->
+<p class="font-body-md text-base text-on-surface/90 mt-5 leading-relaxed max-w-sm">
+          Computer Science at The Superior University, Lahore.
+        </p>
+<!-- Three Minimal Tags -->
+<div class="mt-6 flex items-center">
+<span class="font-label-mono text-xs uppercase tracking-[0.2em] text-white/80 bg-surface-container-low px-4 py-2 rounded-full border border-white/5">
+            CODE · IDEAS · MOBILE
+          </span>
+</div>
+</div>
+<!-- Glowing Curved Earth Horizon Visual Representation -->
+<div class="relative w-full h-56 mt-12 overflow-hidden flex items-end justify-center pointer-events-none select-none">
+<!-- Deep Blue (#3C5C9E) Atmospheric Corona Glow -->
+<div class="absolute -bottom-24 w-[170%] h-64 rounded-[100%] bg-[#3C5C9E]/35 blur-3xl"></div>
+<div class="absolute -bottom-16 w-[150%] h-48 rounded-[100%] bg-[#3C5C9E]/45 blur-xl"></div>
+<!-- Earth Curvature Silhouette -->
+<div class="relative w-[190%] h-72 rounded-[100%] bg-[#04060c] shadow-[inset_0_14px_36px_rgba(60,92,158,0.7)] flex items-start justify-center pt-2">
+<!-- Crisp Glowing Horizon Filament -->
+<div class="w-full h-[1.5px] bg-gradient-to-r from-transparent via-[#8ab2ff] to-transparent opacity-95"></div>
+<!-- Tiny Dot for "Lahore" on Earth's Rim -->
+<div class="absolute top-1 left-[55%] -translate-x-1/2 flex flex-col items-center pointer-events-auto">
+<div class="relative flex items-center justify-center">
+<div class="w-2.5 h-2.5 rounded-full bg-[#afc6ff] shadow-[0_0_10px_#afc6ff] animate-ping opacity-80"></div>
+<div class="absolute w-1.5 h-1.5 rounded-full bg-white shadow-[0_0_6px_#ffffff]"></div>
+</div>
+<span class="mt-2 font-label-mono text-[10px] uppercase tracking-[0.2em] text-[#d8e2ff] bg-black/60 px-2 py-0.5 rounded-full border border-white/10">Lahore</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- ========================================== -->
+<!-- FIXED UI FOOTER STRIP (NO BOTTOM NAV BAR)  -->
+<!-- ========================================== -->
+<aside class="fixed bottom-0 inset-x-0 pb-safe z-40 pointer-events-none">
+<div class="h-12 px-6 flex items-center justify-between font-label-mono text-xs tracking-widest text-white/50 bg-gradient-to-t from-[#05060A] via-[#05060A]/90 to-transparent">
+<!-- Bottom-Left Label -->
+<div class="flex items-center gap-2 pointer-events-auto">
+<span class="w-1.5 h-1.5 rounded-full bg-[#C9D3F0] shadow-[0_0_6px_#C9D3F0]"></span>
+<span class="text-white/70 uppercase" id="active-section-label">01 — MOON</span>
+</div>
+<!-- Bottom-Right Motion Toggle -->
+<button aria-label="Toggle animations" class="flex items-center gap-1.5 pointer-events-auto hover:text-white transition-colors cursor-pointer" id="motion-toggle">
+<span>Motion</span>
+<span class="text-white font-medium" id="motion-status">ON</span>
+</button>
+</div>
+</aside>
+<!-- Overlay script & motion toggle logic -->
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const menuOverlay = document.getElementById('menu-overlay');
+    const menuLinks = document.querySelectorAll('.menu-link');
+    const motionToggle = document.getElementById('motion-toggle');
+    const motionStatus = document.getElementById('motion-status');
+    const sectionLabel = document.getElementById('active-section-label');
+
+    let motionOn = true;
+
+    function openMenu() {
+      menuOverlay.classList.remove('opacity-0', 'pointer-events-none');
+    }
+
+    function closeMenu() {
+      menuOverlay.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    menuBtn?.addEventListener('click', openMenu);
+    closeMenuBtn?.addEventListener('click', closeMenu);
+    menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+    // Motion toggle
+    motionToggle?.addEventListener('click', () => {
+      motionOn = !motionOn;
+      motionStatus.textContent = motionOn ? 'ON' : 'OFF';
+      const animatedEls = document.querySelectorAll('.animate-orbit-slow, .animate-orbit-medium');
+      animatedEls.forEach(el => {
+        el.style.animationPlayState = motionOn ? 'running' : 'paused';
+      });
+    });
+
+    // Update section label on scroll
+    window.addEventListener('scroll', () => {
+      const earthEl = document.getElementById('earth');
+      if (earthEl) {
+        const rect = earthEl.getBoundingClientRect();
+        if (rect.top <= window.innerHeight * 0.45) {
+          sectionLabel.textContent = '02 — EARTH';
+        } else {
+          sectionLabel.textContent = '01 — MOON';
+        }
+      }
+    }, { passive: true });
+  </script>
+</body></html>

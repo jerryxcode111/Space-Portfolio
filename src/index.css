@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Bricolage Grotesque", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-body: "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-void: #05060A;
+  --color-surface-dim: #05060A;
+  --color-surface-card: #0C0E14;
+  --color-moon: #C9D3F0;
+  --color-earth: #3C5C9E;
+  --color-earth-bright: #769CFF;
+  --color-mars: #B2634A;
+  --color-mars-bright: #D67B5F;
+  --color-saturn: #CDB98A;
+  --color-saturn-bright: #E6D7B0;
+  --color-jovian: #BFA58A;
+  --color-neptune: #4B4FA6;
+  --color-neptune-bright: #AFC6FF;
+  --color-solar: #E8A85A;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    background-color: #05060A;
+    color: #ECEFF6;
+    font-family: var(--font-body);
+    overscroll-behavior: none;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Bright display text stroke for Dart & Footer name */
+.text-stroke-bright {
+  -webkit-text-stroke: 1.75px rgba(236, 239, 255, 0.95);
+  color: transparent;
+}
+
+.text-stroke-footer {
+  -webkit-text-stroke: 1.25px rgba(236, 239, 255, 0.18);
+  color: transparent;
+}
+
+/* Starlight grain background overlay */
+.starlight-grid {
+  background-image: radial-gradient(rgba(236, 239, 255, 0.05) 1px, transparent 0);
+  background-size: 28px 28px;
+}
+
+/* Orbit keyframes */
+@keyframes orbit-cw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+@keyframes orbit-ccw {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(-360deg); }
+}
+@keyframes gentle-pulse {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
+}
+
+.animate-orbit-slow {
+  animation: orbit-cw 180s linear infinite;
+}
+.animate-orbit-medium {
+  animation: orbit-ccw 90s linear infinite;
+}
+.animate-pulse-slow {
+  animation: gentle-pulse 4s ease-in-out infinite;
+}
+
+/* When motion is paused */
+.motion-paused .animate-orbit-slow,
+.motion-paused .animate-orbit-medium,
+.motion-paused .animate-pulse,
+.motion-paused .animate-ping,
+.motion-paused .animate-pulse-slow {
+  animation-play-state: paused !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-orbit-slow,
+  .animate-orbit-medium,
+  .animate-pulse,
+  .animate-ping,
+  .animate-pulse-slow {
+    animation: none !important;
+  }
+}
+
+/* Hide scrollbars for carousel lanes */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
