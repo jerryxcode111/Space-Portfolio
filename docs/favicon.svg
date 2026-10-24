@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <!-- 3D Spherical Illumination -->
+    <radialGradient id="moonGlow" cx="32%" cy="28%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="22%" stop-color="#DCE3F5" />
+      <stop offset="50%" stop-color="#8E99B0" />
+      <stop offset="78%" stop-color="#3D4455" />
+      <stop offset="95%" stop-color="#1B1F2A" />
+      <stop offset="100%" stop-color="#0E1118" />
+    </radialGradient>
+
+    <!-- Outer Atmospheric Halo -->
+    <filter id="haloGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="2.5" flood-color="#C9D3F0" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ice-Silver Rim Glow -->
+  <circle cx="32" cy="32" r="28" fill="url(#moonGlow)" filter="url(#haloGlow)" />
+
+  <!-- Lunar Maria (Dark Basalt Plains) -->
+  <!-- Oceanus Procellarum / Large Plain -->
+  <path d="M 18,22 Q 26,16 32,22 Q 30,32 20,32 Z" fill="#2E3443" opacity="0.5" />
+  <!-- Mare Tranquillitatis -->
+  <circle cx="42" cy="30" r="7" fill="#292F3E" opacity="0.45" />
+  <!-- Mare Imbrium -->
+  <ellipse cx="26" cy="18" rx="5" ry="4" fill="#323847" opacity="0.4" />
+  <!-- Mare Crisium (Oval) -->
+  <ellipse cx="48" cy="24" rx="4" ry="3" fill="#1F232E" opacity="0.6" />
+
+  <!-- Major Craters -->
+  <!-- Tycho (South crater with central peak) -->
+  <circle cx="28" cy="46" r="3.2" fill="#2A303D" stroke="#DCE3F5" stroke-width="0.7" opacity="0.85" />
+  <circle cx="28" cy="46" r="1" fill="#FFFFFF" opacity="0.9" />
+
+  <!-- Copernicus crater -->
+  <circle cx="24" cy="30" r="2.8" fill="#242935" stroke="#B8C2DA" stroke-width="0.6" opacity="0.8" />
+
+  <!-- Kepler & Micro Craters -->
+  <circle cx="16" cy="27" r="1.8" fill="#2A303D" stroke="#A6B0C6" stroke-width="0.5" opacity="0.75" />
+  <circle cx="40" cy="42" r="2.2" fill="#222733" stroke="#8E99B0" stroke-width="0.5" opacity="0.6" />
+  <circle cx="34" cy="14" r="1.5" fill="#282D3B" stroke="#B8C2DA" stroke-width="0.5" opacity="0.6" />
+
+  <!-- Spherical Terminator Shadow Shadow Overlay -->
+  <circle cx="32" cy="32" r="28" fill="none" stroke="#C9D3F0" stroke-width="1" stroke-opacity="0.8" />
+</svg>
