@@ -10,7 +10,7 @@ export const MoonHero: React.FC<MoonHeroProps> = ({ onViewWork, onSayHello }) =>
     <section
       id="home"
       aria-label="Section 01: Moon — Introduction"
-      className="relative min-h-screen w-full flex flex-col justify-between items-center text-center px-4 sm:px-6 pt-24 sm:pt-28 pb-12 overflow-hidden select-none"
+      className="relative min-h-screen w-full flex flex-col justify-between items-center text-center px-4 sm:px-6 pt-20 sm:pt-24 md:pt-26 pb-10 sm:pb-12 md:pb-14 overflow-hidden select-none"
     >
       {/* ROTATING VISIBLE STARS IN CIRCULAR ORBITS */}
       <div className="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden">
@@ -48,9 +48,9 @@ export const MoonHero: React.FC<MoonHeroProps> = ({ onViewWork, onSayHello }) =>
       </div>
 
       {/* REALISTIC MOON SPHERE */}
-      <div className="pointer-events-none relative z-10 mt-3 sm:mt-6 mb-2 flex items-center justify-center">
+      <div className="pointer-events-none relative z-10 mt-3 sm:mt-5 md:mt-6 mb-3 sm:mb-4 md:mb-6 flex items-center justify-center">
         <div
-          className="w-[200px] h-[200px] sm:w-[300px] sm:h-[300px] md:w-[380px] md:h-[380px] rounded-full relative overflow-hidden shadow-[0_0_80px_rgba(201,211,240,0.25),0_0_24px_rgba(201,211,240,0.35)]"
+          className="w-[200px] h-[200px] sm:w-[280px] sm:h-[280px] md:w-[330px] md:h-[330px] lg:w-[350px] lg:h-[350px] rounded-full relative overflow-hidden shadow-[0_0_80px_rgba(201,211,240,0.25),0_0_24px_rgba(201,211,240,0.35)]"
           style={{
             background:
               'radial-gradient(circle at 32% 28%, #DCE3F5 0%, #B8C2DA 28%, #6B7285 58%, #2A2E3B 84%, #10121A 100%)',
@@ -93,10 +93,10 @@ export const MoonHero: React.FC<MoonHeroProps> = ({ onViewWork, onSayHello }) =>
         </div>
       </div>
 
-      {/* FOREGROUND HERO CONTENT */}
-      <div className="relative z-20 flex flex-col items-center max-w-5xl mx-auto w-full -mt-4 sm:-mt-6">
+      {/* FOREGROUND HERO CONTENT (Separated with clean breathing room on desktop) */}
+      <div className="relative z-20 flex flex-col items-center max-w-5xl mx-auto w-full mt-2 sm:mt-4 md:mt-8 lg:mt-10">
         {/* Giant Headline in Bricolage Grotesque Bold */}
-        <h1 className="font-headline font-extrabold text-[2.75rem] sm:text-[4.25rem] md:text-[5.75rem] lg:text-[6.5rem] tracking-[-0.035em] text-[#ECEFF6] uppercase leading-[0.92] drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
+        <h1 className="font-headline font-extrabold text-[2.75rem] sm:text-[4.25rem] md:text-[5.25rem] lg:text-[6.25rem] tracking-[-0.035em] text-[#ECEFF6] uppercase leading-[0.92] drop-shadow-[0_8px_24px_rgba(0,0,0,0.9)]">
           <span className="block">MUHAMMAD</span>
           <span className="block text-[#ECEFF6]">JAHANZAIB</span>
         </h1>
