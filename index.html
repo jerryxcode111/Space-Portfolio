@@ -17,19 +17,24 @@
     <link rel="alternate icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="apple-touch-icon" href="./favicon.svg" />
 
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://j-dev.me/" />
+
     <!-- OpenGraph Tags -->
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="Muhammad Jahanzaib — Celestial Portfolio" />
+    <meta property="og:url" content="https://j-dev.me/" />
+    <meta property="og:title" content="Muhammad Jahanzaib — Space Portfolio" />
     <meta
       property="og:description"
-      content="Mobile App Developer crafting fluid Flutter and Dart experiences. Exploring code, building ideas, finding my orbit."
+      content="Mobile App Developer crafting fluid Flutter and Dart experiences. Computer Science student at The Superior University, Lahore. Exploring code, building ideas, finding my orbit."
     />
-    <meta property="og:site_name" content="Muhammad Jahanzaib Portfolio" />
+    <meta property="og:site_name" content="Space Portfolio" />
     <meta property="og:locale" content="en_US" />
 
     <!-- Twitter / X Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Muhammad Jahanzaib — Celestial Portfolio" />
+    <meta name="twitter:url" content="https://j-dev.me/" />
+    <meta name="twitter:title" content="Muhammad Jahanzaib — Space Portfolio" />
     <meta
       name="twitter:description"
       content="Mobile App Developer crafting fluid Flutter and Dart experiences. Exploring code, building ideas, finding my orbit."
@@ -43,22 +48,42 @@
       rel="stylesheet"
     />
 
-    <!-- Schema.org Structured Data (JSON-LD) for SEO -->
+    <!-- Schema.org Structured Data (JSON-LD) for Enhanced SEO -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Muhammad Jahanzaib",
-        "jobTitle": "Mobile App Developer",
-        "description": "Crafting fluid mobile experiences with Flutter & Dart. Computer Science student at The Superior University, Lahore.",
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "The Superior University, Lahore"
-        },
-        "knowsAbout": ["Flutter", "Dart", "Mobile App Development", "Cross-Platform Engineering", "UI/UX Architecture"],
-        "sameAs": [
-          "https://github.com",
-          "https://linkedin.com"
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "@id": "https://j-dev.me/#website",
+            "url": "https://j-dev.me/",
+            "name": "Space Portfolio",
+            "description": "Mobile App Developer portfolio of Muhammad Jahanzaib",
+            "inLanguage": "en-US"
+          },
+          {
+            "@type": "Person",
+            "@id": "https://j-dev.me/#person",
+            "name": "Muhammad Jahanzaib",
+            "url": "https://j-dev.me/",
+            "jobTitle": "Mobile App Developer",
+            "description": "Crafting fluid mobile experiences with Flutter & Dart. Computer Science student at The Superior University, Lahore.",
+            "alumniOf": {
+              "@type": "CollegeOrUniversity",
+              "name": "The Superior University, Lahore"
+            },
+            "knowsAbout": [
+              "Flutter",
+              "Dart",
+              "Mobile App Development",
+              "Cross-Platform Engineering",
+              "UI/UX Architecture"
+            ],
+            "sameAs": [
+              "https://github.com",
+              "https://linkedin.com"
+            ]
+          }
         ]
       }
     </script>

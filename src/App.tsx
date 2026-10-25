@@ -8,6 +8,7 @@ import { SectionId, ProjectItem } from './types';
 import { Navbar } from './components/Navbar';
 import { MobileMenu } from './components/MobileMenu';
 import { BottomBar } from './components/BottomBar';
+import { CelestialScrollProgress } from './components/CelestialScrollProgress';
 import { MoonHero } from './components/sections/MoonHero';
 import { EarthAbout } from './components/sections/EarthAbout';
 import { MarsFocus } from './components/sections/MarsFocus';
@@ -112,6 +113,9 @@ export default function App() {
         !motionEnabled ? 'motion-paused' : ''
       }`}
     >
+      {/* Top Celestial Scroll Loading Progress Bar */}
+      <CelestialScrollProgress motionEnabled={motionEnabled} />
+
       {/* Subtle Starlight Grain Grid Overlay */}
       <div
         className="pointer-events-none fixed inset-0 z-20 opacity-[0.035] mix-blend-screen starlight-grid"
@@ -135,9 +139,8 @@ export default function App() {
         onToggleMotion={handleToggleMotion}
       />
 
-      {/* Fixed Bottom UI: Planetary Coordinate Badge & Motion Switch */}
+      {/* Fixed Bottom-Right UI: Motion Switch */}
       <BottomBar
-        activeSection={activeSection}
         motionEnabled={motionEnabled}
         onToggleMotion={handleToggleMotion}
       />
