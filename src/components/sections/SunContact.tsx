@@ -59,7 +59,7 @@ export const SunContact: React.FC<SunContactProps> = ({ onOpenSignalModal }) => 
         <div className="flex items-center gap-4 sm:gap-6">
           <a
             aria-label="GitHub Profile"
-            href="https://github.com"
+            href="https://github.com/jerryxcode111"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3.5 rounded-full border border-white/10 text-[#9FA4BC] hover:text-white hover:border-[#E8A85A]/60 bg-[#0C0E14]/70 transition-all cursor-pointer active:scale-95"
@@ -68,7 +68,7 @@ export const SunContact: React.FC<SunContactProps> = ({ onOpenSignalModal }) => 
           </a>
           <a
             aria-label="LinkedIn Profile"
-            href="https://linkedin.com"
+            href="https://www.linkedin.com/in/jahanzaibshafiq"
             target="_blank"
             rel="noopener noreferrer"
             className="p-3.5 rounded-full border border-white/10 text-[#9FA4BC] hover:text-white hover:border-[#E8A85A]/60 bg-[#0C0E14]/70 transition-all cursor-pointer active:scale-95"
@@ -77,7 +77,7 @@ export const SunContact: React.FC<SunContactProps> = ({ onOpenSignalModal }) => 
           </a>
           <a
             aria-label="Email Transmission"
-            href="mailto:jahanzaib152307@gmail.com"
+            href="mailto:jerryxcode111@gmail.com"
             className="p-3.5 rounded-full border border-white/10 text-[#9FA4BC] hover:text-white hover:border-[#E8A85A]/60 bg-[#0C0E14]/70 transition-all cursor-pointer active:scale-95"
           >
             <Mail className="w-5 h-5" />

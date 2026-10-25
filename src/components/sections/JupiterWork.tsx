@@ -25,7 +25,7 @@ export const JupiterWork: React.FC<JupiterWorkProps> = ({ onSelectProject }) => 
         'Bi-directional offline synchronization',
         'Custom canvas-rendered planetary nodes',
       ],
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/jerryxcode111',
     },
     {
       id: 'proj-02',
@@ -42,7 +42,7 @@ export const JupiterWork: React.FC<JupiterWorkProps> = ({ onSelectProject }) => 
         'Sub-16ms layout calculations on low-end Android devices',
         'Automated CI golden image regression testing',
       ],
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/jerryxcode111',
     },
     {
       id: 'proj-03',
@@ -59,7 +59,7 @@ export const JupiterWork: React.FC<JupiterWorkProps> = ({ onSelectProject }) => 
         'Live packet visualizer with logarithmic timeline scales',
         'Exportable session logs and HAR analyzer',
       ],
-      githubUrl: 'https://github.com',
+      githubUrl: 'https://github.com/jerryxcode111',
     },
   ];
 

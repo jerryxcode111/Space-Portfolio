@@ -159,7 +159,7 @@ export const SignalModal: React.FC<SignalModalProps> = ({
                 Inquire about this build
               </button>
               <a
-                href={selectedProject.githubUrl || 'https://github.com'}
+                href={selectedProject.githubUrl || 'https://github.com/jerryxcode111'}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="h-11 px-5 rounded-full border border-white/15 text-white flex items-center justify-center gap-2 text-xs font-mono uppercase tracking-wider hover:bg-white/10 transition-colors cursor-pointer"
@@ -182,10 +182,10 @@ export const SignalModal: React.FC<SignalModalProps> = ({
                   Thank you, {name || 'visitor'}. Your message has been logged into the transmission buffer.
                   You can also email directly at{' '}
                   <a
-                    href="mailto:jahanzaib152307@gmail.com"
+                    href="mailto:jerryxcode111@gmail.com"
                     className="text-[#E8A85A] underline underline-offset-4"
                   >
-                    jahanzaib152307@gmail.com
+                    jerryxcode111@gmail.com
                   </a>
                   .
                 </p>
@@ -277,7 +277,7 @@ export const SignalModal: React.FC<SignalModalProps> = ({
 
                 <div className="flex items-center justify-between pt-2">
                   <a
-                    href="mailto:jahanzaib152307@gmail.com"
+                    href="mailto:jerryxcode111@gmail.com"
                     className="font-mono text-xs text-[#9FA4BC] hover:text-[#E8A85A] transition-colors underline underline-offset-4"
                   >
                     Or open in mail client →
