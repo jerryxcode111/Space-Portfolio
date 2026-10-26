@@ -15,7 +15,6 @@ export const SaturnJourney: React.FC = () => {
             'radial-gradient(circle at 65% 35%, #E6D7B0 0%, #CDB98A 30%, #4D4229 65%, #05060A 90%)',
           boxShadow:
             'inset -40px -40px 90px rgba(0,0,0,0.98), inset 12px 12px 35px rgba(230,215,176,0.85), 0 0 140px rgba(205,185,138,0.3)',
-          filter: 'drop-shadow(0 0 80px rgba(205,185,138,0.25))',
         }}
       >
         {/* Saturn Banding Strata */}

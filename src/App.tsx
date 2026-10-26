@@ -6,7 +6,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import { SectionId, ProjectItem } from './types';
 import { Navbar } from './components/Navbar';
-import { MobileMenu } from './components/MobileMenu';
 import { BottomBar } from './components/BottomBar';
 import { CelestialScrollProgress } from './components/CelestialScrollProgress';
 import { MoonHero } from './components/sections/MoonHero';
@@ -22,7 +21,6 @@ import { SignalModal } from './components/SignalModal';
 export default function App() {
   const [activeSection, setActiveSection] = useState<SectionId>('home');
   const [motionEnabled, setMotionEnabled] = useState<boolean>(true);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const [modalState, setModalState] = useState<{
     isOpen: boolean;
     project: ProjectItem | null;
@@ -116,27 +114,16 @@ export default function App() {
       {/* Top Celestial Scroll Loading Progress Bar */}
       <CelestialScrollProgress motionEnabled={motionEnabled} />
 
-      {/* Subtle Starlight Grain Grid Overlay */}
+      {/* Subtle Starlight Grain Grid Overlay (GPU-accelerated, no expensive mix-blend-mode) */}
       <div
-        className="pointer-events-none fixed inset-0 z-20 opacity-[0.035] mix-blend-screen starlight-grid"
+        className="pointer-events-none fixed inset-0 z-20 opacity-75 starlight-grid"
         aria-hidden="true"
       />
 
-      {/* Floating Centered Pill Navbar */}
+      {/* Navigation (Desktop Centered Pill + Phone Top-Right Hamburger Popover) */}
       <Navbar
         activeSection={activeSection}
         onNavigate={handleNavigate}
-        onOpenMobileMenu={() => setIsMobileMenuOpen(true)}
-      />
-
-      {/* Mobile Navigation Drawer Overlay */}
-      <MobileMenu
-        isOpen={isMobileMenuOpen}
-        onClose={() => setIsMobileMenuOpen(false)}
-        onNavigate={handleNavigate}
-        activeSection={activeSection}
-        motionEnabled={motionEnabled}
-        onToggleMotion={handleToggleMotion}
       />
 
       {/* Fixed Bottom-Right UI: Motion Switch */}

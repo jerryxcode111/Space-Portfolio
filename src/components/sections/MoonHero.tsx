@@ -34,7 +34,7 @@ export const MoonHero: React.FC<MoonHeroProps> = ({ onViewWork, onSayHello }) =>
         </div>
 
         {/* Atmospheric Soft Ice-Silver Rim Glow */}
-        <div className="absolute w-[360px] h-[360px] sm:w-[480px] sm:h-[480px] md:w-[560px] md:h-[560px] rounded-full bg-[#C9D3F0]/15 blur-[90px] animate-pulse-slow" />
+        <div className="absolute w-[360px] h-[360px] sm:w-[480px] sm:h-[480px] md:w-[560px] md:h-[560px] rounded-full bg-[#C9D3F0]/15 blur-[40px] sm:blur-[70px] md:blur-[90px] animate-pulse-slow" />
       </div>
 
       {/* Section Label: 01 — MOON */}

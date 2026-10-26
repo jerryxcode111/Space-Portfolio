@@ -45,7 +45,7 @@ export const EarthAbout: React.FC = () => {
       {/* EARTH HORIZON AT BOTTOM: Curved glowing Earth horizon with deep blue tint #3C5C9E & rim light */}
       <div className="relative w-full z-10 select-none pb-2 mt-8 sm:mt-12">
         {/* Atmospheric Backglow */}
-        <div className="pointer-events-none absolute -bottom-36 left-1/2 -translate-x-1/2 w-[90vw] sm:w-[1200px] h-[300px] rounded-[100%] bg-[#3C5C9E]/30 blur-[90px]" />
+        <div className="pointer-events-none absolute -bottom-36 left-1/2 -translate-x-1/2 w-[90vw] sm:w-[1200px] h-[300px] rounded-[100%] bg-[#3C5C9E]/30 blur-[40px] sm:blur-[75px]" />
 
         <div className="relative w-full h-24 sm:h-28 flex items-end justify-center overflow-visible">
           {/* Curved Earth Horizon Arc */}

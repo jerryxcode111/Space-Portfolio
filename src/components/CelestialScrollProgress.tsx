@@ -1,13 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 interface CelestialScrollProgressProps {
   motionEnabled?: boolean;
 }
 
-export const CelestialScrollProgress: React.FC<CelestialScrollProgressProps> = ({
-  motionEnabled = true,
-}) => {
-  const [progress, setProgress] = useState(0);
+/**
+ * Ultra-smooth, zero-rerender GPU-accelerated celestial scroll progress indicator.
+ * Updates directly on the compositor thread via requestAnimationFrame and 3D transforms,
+ * eliminating all React re-renders, layout recalculations, and mobile scroll stutter.
+ */
+export const CelestialScrollProgress: React.FC<CelestialScrollProgressProps> = () => {
+  const barRef = useRef<HTMLDivElement>(null);
+  const cometRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     let ticking = false;
@@ -16,8 +20,19 @@ export const CelestialScrollProgress: React.FC<CelestialScrollProgressProps> = (
       const scrollTop = window.scrollY || document.documentElement.scrollTop;
       const docHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
-      setProgress(Math.min(100, Math.max(0, scrollPercent)));
+      const ratio = docHeight > 0 ? scrollTop / docHeight : 0;
+      const clamped = Math.min(1, Math.max(0, ratio));
+
+      // 100% GPU compositor update — 0 React re-renders & 0 DOM reflows
+      if (barRef.current) {
+        barRef.current.style.transform = `scale3d(${clamped}, 1, 1)`;
+      }
+
+      if (cometRef.current) {
+        cometRef.current.style.transform = `translate3d(${clamped * 100}vw, -50%, 0)`;
+        cometRef.current.style.opacity = clamped > 0.005 ? '1' : '0';
+      }
+
       ticking = false;
     };
 
@@ -42,43 +57,34 @@ export const CelestialScrollProgress: React.FC<CelestialScrollProgressProps> = (
     <div
       role="progressbar"
       aria-label="Celestial scroll progress"
-      aria-valuenow={Math.round(progress)}
-      aria-valuemin={0}
-      aria-valuemax={100}
       className="fixed top-0 left-0 right-0 z-[100] h-[2.5px] pointer-events-none select-none bg-white/[0.04]"
     >
-      {/* Hardware-accelerated GPU transformed progress line */}
+      {/* Hardware-accelerated GPU transformed progress line (scale3d only, 0 layout shifts) */}
       <div
-        className="h-full w-full will-change-transform transition-transform duration-75 ease-out"
+        ref={barRef}
+        className="h-full w-full will-change-transform origin-left"
         style={{
-          transform: `scaleX(${progress / 100})`,
-          transformOrigin: 'left',
+          transform: 'scale3d(0, 1, 1)',
           background:
             'linear-gradient(90deg, #C9D3F0 0%, #3C5C9E 22%, #B2634A 45%, #CDB98A 68%, #BFA58A 85%, #E8A85A 100%)',
           boxShadow:
-            '0 0 10px rgba(201, 211, 240, 0.5), 0 0 20px rgba(232, 168, 90, 0.35)',
+            '0 0 8px rgba(201, 211, 240, 0.4), 0 0 16px rgba(232, 168, 90, 0.3)',
         }}
       />
 
-      {/* Leading glowing celestial comet node */}
-      {progress > 0.5 && (
-        <div
-          className="absolute top-1/2 -translate-y-1/2 -ml-1.5 w-3 h-3 rounded-full pointer-events-none transition-transform duration-75 ease-out"
-          style={{
-            left: `${progress}%`,
-          }}
-        >
-          {/* Pulsing starlight corona halo */}
-          <span
-            className={`absolute inset-0 rounded-full bg-[#E8A85A] opacity-60 ${
-              motionEnabled ? 'animate-ping' : ''
-            }`}
-            style={{ animationDuration: '2.5s' }}
-          />
-          {/* Center pinpoint luminous core */}
-          <span className="relative block w-full h-full rounded-full bg-white shadow-[0_0_8px_#ffffff,0_0_16px_#C9D3F0,0_0_24px_#E8A85A]" />
-        </div>
-      )}
+      {/* Leading glowing celestial comet node (translate3d only on GPU compositor) */}
+      <div
+        ref={cometRef}
+        className="absolute top-1/2 left-0 -ml-1.5 w-3 h-3 rounded-full pointer-events-none opacity-0 will-change-transform"
+        style={{
+          transform: 'translate3d(0vw, -50%, 0)',
+        }}
+      >
+        {/* Soft static starlight corona */}
+        <span className="absolute -inset-1 rounded-full bg-[#E8A85A]/30 blur-[2px]" />
+        {/* Center luminous core */}
+        <span className="relative block w-full h-full rounded-full bg-white shadow-[0_0_8px_#ffffff,0_0_14px_#C9D3F0,0_0_20px_#E8A85A]" />
+      </div>
     </div>
   );
 };

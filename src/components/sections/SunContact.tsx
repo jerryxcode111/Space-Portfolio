@@ -13,7 +13,7 @@ export const SunContact: React.FC<SunContactProps> = ({ onOpenSignalModal }) => 
       className="relative w-full min-h-screen px-4 sm:px-6 lg:px-16 pt-24 sm:pt-28 pb-28 sm:pb-32 flex flex-col justify-between items-center overflow-hidden select-none"
     >
       {/* Strong Amber Sun Glow (#E8A85A) Rising from Bottom Edge */}
-      <div className="pointer-events-none absolute -bottom-44 sm:-bottom-48 left-1/2 -translate-x-1/2 w-[850px] lg:w-[1300px] h-[450px] lg:h-[600px] bg-gradient-to-t from-[#E8A85A]/30 via-[#E8A85A]/[0.08] to-transparent rounded-t-full blur-[130px]" />
+      <div className="pointer-events-none absolute -bottom-44 sm:-bottom-48 left-1/2 -translate-x-1/2 w-[850px] lg:w-[1300px] h-[450px] lg:h-[600px] bg-gradient-to-t from-[#E8A85A]/30 via-[#E8A85A]/[0.08] to-transparent rounded-t-full blur-[45px] sm:blur-[80px] md:blur-[110px]" />
       <div className="pointer-events-none absolute -bottom-64 sm:-bottom-72 left-1/2 -translate-x-1/2 w-[700px] sm:w-[950px] h-[700px] sm:h-[950px] rounded-full border border-[#E8A85A]/15 opacity-50" />
       <div className="pointer-events-none absolute -bottom-80 sm:-bottom-96 left-1/2 -translate-x-1/2 w-[900px] sm:w-[1250px] h-[900px] sm:h-[1250px] rounded-full border border-[#E8A85A]/10 opacity-30" />
 

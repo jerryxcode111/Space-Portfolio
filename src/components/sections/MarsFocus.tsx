@@ -14,8 +14,7 @@ export const MarsFocus: React.FC = () => {
           background:
             'radial-gradient(circle at 75% 25%, #D67B5F 0%, #B2634A 25%, #38150C 55%, #05060A 80%)',
           boxShadow:
-            'inset -45px -45px 90px rgba(0,0,0,0.98), inset 12px 12px 40px rgba(214,123,95,0.9), 0 0 160px rgba(178,99,74,0.4)',
-          filter: 'drop-shadow(0 0 90px rgba(178,99,74,0.3))',
+            'inset -45px -45px 90px rgba(0,0,0,0.98), inset 12px 12px 40px rgba(214,123,95,0.9), 0 0 140px rgba(178,99,74,0.45)',
         }}
       >
         {/* Mars Atmosphere Haze */}
