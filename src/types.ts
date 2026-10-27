@@ -8,17 +8,29 @@ export interface SectionMeta {
   color: string;
 }
 
+export interface ProjectStat {
+  label: string;
+  value: string;
+}
+
 export interface ProjectItem {
   id: string;
-  num: string;
+  num?: string;
   title: string;
-  subtitle: string;
-  description: string;
+  category?: string;
+  year?: string;
+  subtitle?: string;
+  tagline?: string;
+  description?: string;
   tech: string[];
-  icon: 'crescent' | 'globe' | 'star';
-  status: string;
-  highlights: string[];
+  icon?: 'crescent' | 'globe' | 'star';
+  status?: string;
+  highlights?: string[];
   githubUrl?: string;
+  liveUrl?: string;
+  stats?: ProjectStat[];
+  color?: string;
+  accentColor?: string;
 }
 
 export interface SignalModalProps {

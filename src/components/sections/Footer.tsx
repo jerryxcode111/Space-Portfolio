@@ -1,4 +1,5 @@
 import React from 'react';
+import { Heart, ArrowUp } from 'lucide-react';
 import { SectionId } from '../../types';
 
 interface FooterProps {
@@ -16,40 +17,43 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onScrollToTop }) => 
   ];
 
   return (
-    <footer className="relative w-full bg-[#030407] pt-16 pb-12 overflow-hidden flex flex-col justify-between border-t border-white/5 select-none">
-      {/* Minimal Row: Links + Back to top */}
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center justify-between gap-6 pb-10">
-        <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-6 sm:gap-7">
-          {links.map((link) => (
+    <footer className="relative w-full bg-[#030407] py-10 sm:py-12 overflow-hidden border-t border-white/5 select-none">
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 flex flex-col items-center gap-6">
+        {/* Simple Top Row: Navigation Links + Back to Top */}
+        <div className="w-full flex flex-col sm:flex-row items-center justify-between gap-5 pb-6 border-b border-white/5">
+          <nav aria-label="Footer Navigation" className="flex flex-wrap items-center justify-center gap-6 sm:gap-8">
+            {links.map((link) => (
+              <button
+                key={link.id}
+                onClick={() => onNavigate(link.id)}
+                className="font-mono text-xs uppercase tracking-widest text-[#9FA4BC] hover:text-white transition-colors cursor-pointer focus:outline-none"
+              >
+                {link.label}
+              </button>
+            ))}
+          </nav>
+
+          <div className="flex items-center gap-6">
+            <span className="font-mono text-xs text-white/40 uppercase tracking-widest">
+              © 2026
+            </span>
             <button
-              key={link.id}
-              onClick={() => onNavigate(link.id)}
-              className="font-mono text-xs uppercase tracking-widest text-[#9FA4BC] hover:text-white transition-colors cursor-pointer"
+              onClick={onScrollToTop}
+              aria-label="Scroll back to top"
+              className="font-mono text-xs uppercase tracking-widest text-[#9FA4BC] hover:text-white flex items-center gap-1.5 group transition-colors cursor-pointer focus:outline-none"
             >
-              {link.label}
+              <span>Back to top</span>
+              <ArrowUp className="w-3.5 h-3.5 transform group-hover:-translate-y-0.5 transition-transform text-[#C9D3F0]" />
             </button>
-          ))}
-        </nav>
-
-        <div className="flex items-center gap-6 sm:gap-8">
-          <span className="font-mono text-xs text-[#9FA4BC] uppercase tracking-widest">
-            © 2026
-          </span>
-          <button
-            onClick={onScrollToTop}
-            className="font-mono text-xs uppercase tracking-widest text-[#9FA4BC] hover:text-white flex items-center gap-2 group transition-colors cursor-pointer"
-          >
-            <span>Back to top</span>
-            <span className="transform group-hover:-translate-y-1 transition-transform">↑</span>
-          </button>
+          </div>
         </div>
-      </div>
 
-      {/* Outlined display name (~15% opacity) */}
-      <div className="w-full px-2 sm:px-4 overflow-hidden pointer-events-none pt-4 pb-2">
-        <h2 className="font-headline font-extrabold text-[clamp(2.1rem,7.5vw,7.8rem)] text-center uppercase tracking-tight text-transparent text-stroke-footer opacity-20 whitespace-nowrap leading-none mx-auto select-none">
-          MUHAMMAD JAHANZAIB
-        </h2>
+        {/* Center Bottom: Designed & Built with Heart */}
+        <div className="flex items-center justify-center gap-2 text-center text-xs sm:text-sm font-body text-white/70">
+          <span>Designed & built with</span>
+          <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-pulse inline" />
+          <span>by <span className="text-white font-medium">Muhammad Jahanzaib</span></span>
+        </div>
       </div>
     </footer>
   );
